@@ -1,0 +1,55 @@
+﻿function Test1()
+{
+  var browser;
+  var page;
+  var panel;
+  var textbox;
+  Aliases.AcroRd32.wndAcrobatSDIWindow.Minimize();
+  Browsers.Item(btEdge).Run("about:blank");
+  Aliases.explorer.wndProgman.SHELLDLL_DefView.FolderView.Click(1649, 21);
+  Browsers.Item(btIExplorer, "", Browsers.pX64).Run("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
+  browser = Aliases.browser;
+  page = browser.pageWebOrdersLogin;
+  page.Wait();
+  browser.BrowserWindow.FrameTab.tabpage.ShellDocObjectView.browser.SetText("T");
+  panel = page.formAspnetform.panelLogin;
+  textbox = panel.textboxUsername;
+  textbox.SetText("Tester");
+  textbox.Keys("[Tab]");
+  panel.passwordboxPassword.SetText("test");
+  panel.submitbuttonLogin.ClickButton();
+}
+
+function Test2()
+{
+  var Var1;
+  Var1 = "\"Idaho National\"";
+  //Launches the specified browser and opens the specified URL in it.
+  Browsers.Item(btIExplorer, "", Browsers.pX64).Run("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
+  //Minimizes the 'wndAcrobatSDIWindow' window.
+  Aliases.AcroRd32.wndAcrobatSDIWindow.Minimize();
+  //Waits until the browser loads the page and is ready to accept user input.
+  Aliases.browser.pageWebOrdersLogin.Wait();
+  //Enters 'Te' in the 'browser' object.
+  Aliases.browser.BrowserWindow.FrameTab.tabpage.ShellDocObjectView.browser.Keys("Te");
+  //Sets the text 'Tester' in the 'textboxUsername' text editor.
+  Aliases.browser.pageWebOrdersLogin.formAspnetform.panelLogin.textboxUsername.SetText("Tester");
+  //Enters '[Tab]' in the 'textboxUsername' object.
+  Aliases.browser.pageWebOrdersLogin.formAspnetform.panelLogin.textboxUsername.Keys("[Tab]");
+  //Sets the text 'test' in the 'passwordboxPassword' text editor.
+  Aliases.browser.pageWebOrdersLogin.formAspnetform.panelLogin.passwordboxPassword.SetText("test");
+  //Clicks the 'submitbuttonLogin' control.
+  Aliases.browser.pageWebOrdersLogin.formAspnetform.panelLogin.submitbuttonLogin.ClickButton();
+  //Minimizes the 'wndAcrobatSDIWindow' window.
+  Aliases.AcroRd32.wndAcrobatSDIWindow.Minimize();
+  //Clicks at point (588, 21) of the 'FolderView' object.
+  Aliases.explorer.wndProgman.SHELLDLL_DefView.FolderView.Click(588, 21);
+  //Executes the low-level procedure.
+  Lowleveldemo.LLP1.Execute();
+  //Navigates to the ''http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx'' address.
+  Aliases.browser.ToUrl("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx");
+  //Clicks the 'linkLogout' control.
+  Aliases.browser.pageWebOrders.formAspnetform.linkLogout.Click();
+  //Closes the 'BrowserWindow' window.
+  Aliases.browser.BrowserWindow.Close();
+}

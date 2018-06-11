@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="12.0" key="{78BE7B1F-C89D-45A0-8F3D-D1855AD8BED8}">
+	<children>
+		<child name="INLFirstDemo" key="{E4F8771F-FBE2-4EFE-B2D9-736EEA59EEA1}" type="Project" typeId="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" pluginName="">
+			<data path="INLFirstDemo\INLFirstDemo.mds" />
+		</child>
+		<child name="INLSecondDemo" key="{E97D20E6-1765-4A4F-878D-A1793F976779}" type="Project" typeId="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" pluginName="">
+			<data path="..\INLSecondDemo\INLSecondDemo.mds" />
+		</child>
+	</children>
+	<folders />
+	<testItems key="{2677AED6-C1BC-4BAF-9F94-E7B1F2399AD3}">
+		<children>
+			<testItem key="{E4F8771F-FBE2-4EFE-B2D9-736EEA59EEA1}" enabled="True" timeout="0" stopOnError="True" description="" />
+			<testItem key="{E97D20E6-1765-4A4F-878D-A1793F976779}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{8309E553-EE8D-4597-B483-E6DD285C92A2}">
+		<data Version="3" />
+	</variables>
+	<analysis key="{B36B5664-E345-4931-80B6-B4CF5ED5E7DD}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}" />
+</Root>
